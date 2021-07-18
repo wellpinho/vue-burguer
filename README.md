@@ -1,5 +1,7 @@
 # vue-burguer
 
+![](public/img/print.png)
+
 ## Project setup
 ```
 npm install
