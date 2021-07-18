@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
-    <router-link to="/" id="logo-url"> 
+    <router-link to="/" id="logo-url" class="logo"> 
       <img :src="logo" :alt="alt" id="logo">
+      <h2>Well Burgers</h2>
     </router-link>
 
     <router-link to="/">Home</router-link>
@@ -36,11 +37,20 @@
   #nav #logo-url {
     margin:  auto;
     margin-left: 0;
+
+    display: flex;
+    align-items: center;
   }
 
   #logo {
     width: 40px;
     height: 40px;
+  }
+
+  #nav #logo-url h2 {
+    font-weight: 100;
+    font-size: 34px;
+    margin-left: .5rem;
   }
 
   #nav a {
