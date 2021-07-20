@@ -184,6 +184,27 @@
       "optional": [],
       "status": "Solicitado",
       "id": 11
+    },
+    {
+      "name": "Wendell pinho",
+      "beef": "Alcatra",
+      "bread": "Italiano Branco",
+      "optional": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 12
+    },
+    {
+      "name": "Wellington",
+      "beef": "Picanha",
+      "bread": "Integral",
+      "optional": [
+        "Tomate",
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 13
     }
   ]
 }

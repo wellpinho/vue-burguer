@@ -12,16 +12,24 @@
         </div>
       </div>
 
-      <div id="burger-table-rows">
+      <div 
+        id="burger-table-rows"
+        v-for="burger in burgers"
+        :key="burger.id"
+      >
         <div class="burger-table-row">
-          <div class="order-number">1</div>
-          <div>João</div>
-          <div>Pão Integral</div>
-          <div>Maminha</div>
+          <div class="order-number">{{ burger.id }}</div>
+          <div>{{ burger.name }}</div>
+          <div>{{ burger.bread }}</div>
+          <div>{{ burger.beef}}</div>
           <div>
             <ul>
-              <li>Salame</li>
-              <li>Tomate</li>
+              <li 
+                v-for="(optional, index) in burger.optional" 
+                :key="index"
+              >
+                {{ optional }}
+              </li>
             </ul>
           </div>
 
@@ -43,9 +51,22 @@ export default ({
   name: 'Dashboard',
   data() {
     return {
-
+      burgers: null,
+      burger_id: null,
+      status: ''
     }
   },
+  methods: {
+    async getRequests() {
+      const request = await fetch('http://localhost:3000/burgers');
+      const data = await request.json();
+
+      this.burgers = data;
+    }
+  },
+  mounted() {
+    this.getRequests();
+  }
 })
 </script>
 
@@ -105,5 +126,9 @@ export default ({
     border: 2px solid #fcba03;
     background-color: #fcba03;
     color: #FFF;
+  }
+
+  ul {
+    list-style: none;
   }
 </style>
