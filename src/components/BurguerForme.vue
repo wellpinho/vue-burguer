@@ -2,7 +2,7 @@
   <div>
     <p>Componente de mensagem</p>
     <div>
-      <form id="burger-form">
+      <form id="burger-form" @submit.prevent="createBurger">
         <div class="input-container">
           <label for="name">Nome do Cliente</label>
           <input 
@@ -36,7 +36,7 @@
           <select 
             name="beef" 
             id="beef" 
-            v-model="bread"
+            v-model="beef"
           >
             <option 
               v-for="beef in beefs" 
@@ -88,22 +88,46 @@ export default ({
       beefs: null,
       optionalsArr: null,
       name: null,
+      bread: null,
       beef: null,
-      optional: [],
+      optionals: [],
       status: "Solicitado",
       msg: null
     }
   },
   methods: {
     async getIngredients() {
-      const req = await fetch('http://localhost:3000/ingredientes');
-      const data = await req.json();
+      const request = await fetch('http://localhost:3000/ingredientes');
+      const data = await request.json();
 
-      this.breads = data.paes;
-      this.beefs = data.carnes;
-      this.optionalsArr = data.opcionais;
-    }
+      this.breads = data.breads;
+      this.beefs = data.beefs;
+      this.optionalsArr = data.optionals;
+    },
+    async createBurger() {
+      const data = {
+        name: this.name,
+        beef: this.beef,
+        bread: this.bread,
+        optional: Array.from(this.optionals),
+        status: this.status,
+      }
+      const dataJson = JSON.stringify(data);
+
+      const req = await fetch('http://localhost:3000/burgers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: dataJson
+      })
+
+      const response = await req.json();
+
+      this.name = ''
+      this.bread = ''
+      this.beef = ''
+    },
   },
+
   mounted() {
     this.getIngredients()
   }

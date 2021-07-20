@@ -1,6 +1,6 @@
 {
   "ingredientes": {
-    "paes": [
+    "breads": [
       {
         "id": 1,
         "tipo": "Italiano Branco"
@@ -18,7 +18,7 @@
         "tipo": "Integral"
       }
     ],
-    "carnes": [
+    "beefs": [
       {
         "id": 1,
         "tipo": "Maminha"
@@ -36,7 +36,7 @@
         "tipo": "Veggie burger"
       }
     ],
-    "opcionais": [
+    "optionals": [
       {
         "id": 1,
         "tipo": "Bacon"
@@ -77,5 +77,63 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "name": null,
+      "beef": null,
+      "bread": null,
+      "optional": [],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "name": "Wellington",
+      "beef": null,
+      "bread": "Alcatra",
+      "optional": [
+        "Bacon",
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "name": "Wellington",
+      "beef": null,
+      "bread": "Picanha",
+      "optional": [],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "name": "Wellington",
+      "beef": null,
+      "bread": "Picanha",
+      "optional": [],
+      "status": "Solicitado",
+      "id": 4
+    },
+    {
+      "name": "Mary Pinho",
+      "beef": "Veggie burger",
+      "bread": "Integral",
+      "optional": [
+        "Cheddar",
+        "Cebola roxa",
+        "Pepino",
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 5
+    },
+    {
+      "name": "Wellington",
+      "beef": "Picanha",
+      "bread": "3 Queijos",
+      "optional": [],
+      "status": "Solicitado",
+      "id": 6
+    }
+  ]
 }
