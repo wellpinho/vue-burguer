@@ -134,6 +134,56 @@
       "optional": [],
       "status": "Solicitado",
       "id": 6
+    },
+    {
+      "name": "Wellington",
+      "beef": "Picanha",
+      "bread": "Integral",
+      "optional": [
+        "Cheddar",
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "name": "Wellington",
+      "beef": "Picanha",
+      "bread": "Integral",
+      "optional": [
+        "Cheddar",
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 8
+    },
+    {
+      "name": "Wellington",
+      "beef": "Picanha",
+      "bread": "Integral",
+      "optional": [
+        "Bacon",
+        "Cebola roxa",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 9
+    },
+    {
+      "name": "Wellington",
+      "beef": "Picanha",
+      "bread": "Integral",
+      "optional": [],
+      "status": "Solicitado",
+      "id": 10
+    },
+    {
+      "name": "Wellington",
+      "beef": "Picanha",
+      "bread": "Integral",
+      "optional": [],
+      "status": "Solicitado",
+      "id": 11
     }
   ]
 }
