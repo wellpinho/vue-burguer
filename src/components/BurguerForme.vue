@@ -127,7 +127,10 @@ export default ({
 
       this.msg = `Obrigado ${response.name}, seu pedido Nº ${response.id} foi realizado com sucesso!`;
 
-      setTimeout(() => this.msg = '', 5000)
+      // remove message after 5 seconds
+      setTimeout(() => this.msg = '', 5000);
+
+      // clear all input after send buttom
       this.name = '';
       this.bread = '';
       this.beef = '';
