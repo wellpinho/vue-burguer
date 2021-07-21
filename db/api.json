@@ -79,16 +79,6 @@
   ],
   "burgers": [
     {
-      "name": "Wendell pinho",
-      "beef": "Alcatra",
-      "bread": "Italiano Branco",
-      "optional": [
-        "Bacon"
-      ],
-      "status": "Em produção",
-      "id": 12
-    },
-    {
       "name": "Wellington",
       "beef": "Picanha",
       "bread": "Integral",
@@ -96,7 +86,7 @@
         "Tomate",
         "Bacon"
       ],
-      "status": "Finalizado",
+      "status": "Solicitado",
       "id": 13
     }
   ]
