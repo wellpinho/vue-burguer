@@ -85,7 +85,7 @@
       "optional": [
         "Bacon"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 12
     },
     {
@@ -96,7 +96,7 @@
         "Tomate",
         "Bacon"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 13
     }
   ]

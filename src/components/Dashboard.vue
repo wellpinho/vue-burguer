@@ -34,9 +34,13 @@
           </div>
 
           <div>
-            <select name="status" class="status">
+            <select 
+              name="status" 
+              class="status"
+              @change="update($event, burger.id)"
+            >
               <option 
-                value="state.tipo"
+                :value="state.tipo"
                 v-for="state in status"
                 :key="state.id"
                 :selected="burger.status === state.tipo"
@@ -90,6 +94,20 @@ export default ({
       const response = await request.json();
 
       this.getRequests();
+    },
+    async update(event, id) {
+      const option = event.target.value;
+      const dataJson = JSON.stringify({ status: option })
+      const request = await fetch(`http://localhost:3000/burgers/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json'},
+        body: dataJson
+      });
+
+      const response = await request.json();
+
+      console.log(response)
+
     }
   },
   mounted() {
